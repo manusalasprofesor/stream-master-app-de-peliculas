@@ -45,12 +45,11 @@ h2{
     color: var(--color-secondary);
     padding: 20px 40px 0 40px;
     margin: 0;
-    background-color: inherit; /* Mismo fondo que el resto */
+    background-color: inherit; 
 }
 
 #contenedor-pelis {
   display: grid;
-  /* Crea tantas columnas como quepan, de mínimo 200px cada una */
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
@@ -60,7 +59,7 @@ h2{
 .movie-card {
   background-color: var(--color-dark);
   border-radius: 8px;
-  overflow: hidden; /* Para que la imagen no se salga de las esquinas redondeadas */
+  overflow: hidden; 
   transition: transform 0.3s ease;
   cursor: pointer;
   display: flex;
@@ -68,7 +67,6 @@ h2{
   color: var(--color-secondary);
 }
 
-/* Efecto Hover: ¡imprescindible para el estilo streaming! */
 .movie-card:hover {
   transform: scale(1.05);
   z-index: 10;
@@ -83,7 +81,6 @@ h2{
 .movie-card h3 {
   font-size: 1rem;
   margin: 10px;
-  /* Si el título es muy largo, ponemos puntos suspensivos */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -91,7 +88,7 @@ h2{
 
 .movie-card span {
   padding: 0 10px 10px 10px;
-  color: var(--color-green-rate); /* Verde para la nota */
+  color: var(--color-green-rate); 
   font-weight: bold;
 }
 
@@ -103,7 +100,7 @@ h2{
   gap: 10px;
   padding: 40px;
   background-color: inherit;
-  flex-wrap: wrap; /* Para que en móviles se ponga uno debajo de otro */
+  flex-wrap: wrap; 
 }
 input{
   min-width: 30%;
@@ -125,8 +122,6 @@ button {
 button:hover {
   background-color: var(--color-accent-hover);
 }
-
-
 
 /* BOTÓN DE LIMPIAR LA BÚSQUEDA */
 #botonLimpiar {
@@ -174,7 +169,7 @@ button:hover {
 }
 
 
-/* ====================================================================== */
+/* =========== PAGINACIÓN ================================ */
 .controles-paginacion {
     display: flex;
     justify-content: center;
