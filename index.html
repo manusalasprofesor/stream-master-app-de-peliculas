@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Películas, petición asíncrona</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>🎬 StreamMaster</h1>
+        
+        <form class="buscador-container" id="formulario-busqueda">
+            <input type="text" id="busqueda" placeholder="¿Qué quieres ver hoy?">
+
+            <select id="filtro">
+                <option value="movie">Películas</option>
+                <option value="person">Actores/Directores</option>
+                <option value="tv">Series</option>
+            </select>
+
+            <button type="submit" id="botonBuscar">Buscar</button>
+            <button type="button" id="botonLimpiar">Limpiar</button>
+        </form>
+    </header>
+
+    <main>
+        <h2 id="titulo-seccion">Tendencias de hoy</h2>
+        <section id="contenedor-pelis"></section>
+    </main>
+    
+    <!-- Botón de + películas -->
+    <div class="controles-paginacion">
+        <button id="btnVerMas" style="display: none;">Ver más...</button>
+    </div>
+
+    <div id="modal-pelicula" class="modal-oculto">
+        <div class="modal-contenido">
+            <span id="cerrar-modal">&times;</span>
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-sinopsis"></p>
+        </div>
+    </div>
+
+    <!-- Mis scripts -->
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
