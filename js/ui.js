@@ -24,7 +24,7 @@ export function pintarResultados(lista, contenedor, tipoBusqueda, limpiar= true)
             ${item.vote_average ? `<span>⭐ ${item.vote_average.toFixed(1)}</span>` : ''}
         `;
 
-        // card.addEventListener('click', () => mostrarDetalles(item.title || item.name, item.overview));
+        
         // Extra para el caso de que sea un actor
         card.addEventListener('click', () => {
             if (tipoBusqueda === 'person') {
@@ -44,12 +44,7 @@ export function pintarResultados(lista, contenedor, tipoBusqueda, limpiar= true)
     contenedor.appendChild(fragmento);
 }
 
-// export function mostrarDetalles(titulo, sinopsis) {
-//     const modal = document.querySelector('#modal-pelicula');
-//     document.querySelector('#modal-titulo').textContent = titulo;
-//     document.querySelector('#modal-sinopsis').textContent = sinopsis || "Sinopsis no disponible.";
-//     modal.style.display = 'flex';
-// }
+
 export function mostrarDetalles(titulo, contenido, esActor) {
     // const tituloModal = document.querySelector('#modal-titulo');
     // const cuerpoModal = document.querySelector('#modal-sinopsis');
