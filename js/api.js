@@ -5,18 +5,6 @@
 
 import { API_KEY, BASE_URL } from '../config.js';
 
-// export async function fetchBusqueda(termino, tipo) {
-//     const url = `${BASE_URL}/search/${tipo}?api_key=${API_KEY}&query=${encodeURIComponent(termino)}&language=es-ES`;
-//     const response = await fetch(url);
-//     return await response.json();
-// }
-
-// export async function fetchTendencias() {
-//     const url = `${BASE_URL}/trending/movie/day?api_key=${API_KEY}&language=es-ES`;
-//     const response = await fetch(url);
-//     return await response.json();
-// }
-
 // ==== AÑADIMOS LA QUERY PARA LA PAGINACIÓN
 export async function fetchBusqueda(termino, tipo, pagina = 1) {
     const url = `${BASE_URL}/search/${tipo}?api_key=${API_KEY}&query=${encodeURIComponent(termino)}&language=es-ES&page=${pagina}`;
